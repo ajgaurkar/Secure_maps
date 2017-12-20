@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Statistics_menu"
+        android:title="Statistics" />
+    <item
+        android:id="@+id/overview_menu"
+        android:title="Overview Data" />
+    <!--<item-->
+    <!--android:id="@+id/screenshot_menu"-->
+    <!--android:title="Screen Shot" />-->
+
+</menu>

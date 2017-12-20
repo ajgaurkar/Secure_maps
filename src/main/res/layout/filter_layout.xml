@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/sample_textview_bg_frame"
+        android:padding="5dp">
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Display fields"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_toStartOf="@+id/view3"
+            android:text="Incidents" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/checkBox"
+            android:layout_toStartOf="@+id/view3"
+            android:text="Events" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBox"
+            android:layout_alignBottom="@+id/checkBox"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_toEndOf="@+id/checkBox"
+            android:text="Law and control" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/checkBox3"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_below="@+id/checkBox2"
+            android:layout_toEndOf="@+id/checkBox"
+            android:text="Care centers" />
+
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:text="Display details" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/checkBox4"
+        android:layout_margin="10dp"
+        android:text="Time range"
+        android:textStyle="bold" />
+
+    <com.appyvet.materialrangebar.RangeBar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rangebar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="-20dp"
+        app:mrb_selectorSize="10dp"
+        app:mrb_tickEnd="2017"
+        app:mrb_tickInterval="1"
+        app:mrb_tickStart="2010"
+        custom:barColor="@color/colorAccent"
+        custom:connectingLineColor="@color/colorAccent"
+        custom:thumbColorNormal="@color/colorAccent"
+        custom:thumbRadius="3dp"
+        custom:tickCount="12"
+        custom:tickHeight="5dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/view4"
+        android:layout_below="@+id/rangebar1"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/view4"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:text="2007"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:gravity="end"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:text="2017"
+        android:textStyle="bold" />
+
+    <!--<com.crystal.crystalrangeseekbar.widgets.BubbleThumbRangeSeekbar-->
+    <!--android:id="@+id/rangeSeekbar5"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:corner_radius="10"-->
+    <!--app:min_value="0"-->
+    <!--app:max_value="100"-->
+    <!--android:layout_marginTop="200dp"-->
+    <!--app:steps="5"-->
+    <!--app:bar_color="#F7BB88"-->
+    <!--app:bar_highlight_color="#E07416"-->
+    <!--app:left_thumb_image="@drawable/pin_search_100"-->
+    <!--app:right_thumb_image="@drawable/select_area_100"-->
+    <!--app:left_thumb_image_pressed="@drawable/select_area_100"-->
+    <!--app:right_thumb_image_pressed="@drawable/pin_search_100"-->
+    <!--app:data_type="_integer"/>-->
+
+</RelativeLayout>

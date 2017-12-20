@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaurk.secure_maps.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/selection_confirm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/selected_latlong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="Lat Long"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/center_pin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/center_pin"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/circle_view"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/picker_circle"
+            android:visibility="invisible" />
+
+        <!--<Button-->
+        <!--android:id="@+id/select_cood_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_toStartOf="@+id/view2"-->
+        <!--android:text="Select" />-->
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <!--<Button-->
+        <!--android:id="@+id/cancel_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_toEndOf="@+id/view2"-->
+        <!--android:text="Cancel" />-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/heat_map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:id="@+id/options_image_view"-->
+        <!--android:src="@drawable/slider_32" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView5"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/rangebar1"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/filter_fab"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginStart="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="2dp"-->
+        <!--android:text="Year\n2007"-->
+        <!--android:textColor="@color/colorAccent"-->
+        <!--android:textStyle="bold" />-->
+
+        <!--<com.edmodo.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/rangebar1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="30dp"-->
+        <!--android:layout_toEndOf="@+id/textView5"-->
+        <!--android:layout_toStartOf="@+id/textView6"-->
+        <!--custom:barColor="@color/colorAccent"-->
+        <!--custom:connectingLineColor="@color/colorAccent"-->
+        <!--custom:thumbColorNormal="@color/colorAccent"-->
+        <!--custom:thumbRadius="3dp"-->
+        <!--custom:tickCount="12"-->
+        <!--custom:tickHeight="5dp" />-->
+
+
+        <com.appyvet.materialrangebar.RangeBar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rangeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            app:mrb_pinMaxFont="10sp"
+            app:barColor="#fc8181"
+            app:mrb_pinTextColor="#ACD123"
+            app:mrb_rangeBarPaddingBottom="12dp"
+            app:mrb_selectorBoundaryColor="#fc8181"
+            app:mrb_selectorBoundarySize="2dp"
+            app:mrb_selectorSize="10dp"
+            app:mrb_tickEnd="2017"
+            app:mrb_tickInterval="1"
+            app:mrb_tickStart="2010" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView6"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/rangebar1"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_below="@+id/add_item_btn"-->
+        <!--android:layout_marginEnd="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="2dp"-->
+        <!--android:text="Year\n2017"-->
+        <!--android:textColor="@color/colorAccent"-->
+        <!--android:textStyle="bold" />-->
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/filter_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rangeBar"
+            android:layout_alignTop="@+id/add_item_btn"
+            fab:fab_colorNormal="#fff"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/filter_48" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_item_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-30dp"
+
+            android:layout_above="@+id/rangeBar"
+            android:layout_alignEnd="@+id/rangeBar"
+            fab:fab_colorNormal="#fff"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/plus_48"/>
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionsMenu-->
+        <!--android:id="@+id/add_btn_list"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/discreteSeekBar"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--fab:fab_addButtonColorNormal="#fff"-->
+        <!--fab:fab_addButtonColorPressed="@color/colorPrimaryDark"-->
+        <!--fab:fab_addButtonPlusIconColor="@color/colorPrimaryDark"-->
+        <!--fab:fab_labelStyle="@style/menu_labels_style"-->
+        <!--fab:fab_labelsPosition="left">-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/search_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--fab:fab_colorNormal="#fff"-->
+        <!--fab:fab_colorPressed="@color/colorPrimaryDark"-->
+        <!--fab:fab_icon="@drawable/search_text_100"-->
+        <!--fab:fab_title=" Search address " />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/pin_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/center_pin"-->
+        <!--fab:fab_colorNormal="#fff"-->
+        <!--fab:fab_colorPressed="@color/colorPrimaryDark"-->
+        <!--fab:fab_icon="@drawable/pin_search_100"-->
+        <!--fab:fab_title=" Pin location " />-->
+
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/area_fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--fab:fab_colorNormal="#fff"-->
+        <!--fab:fab_colorPressed="@color/colorPrimaryDark"-->
+        <!--fab:fab_icon="@drawable/select_area_100"-->
+        <!--fab:fab_title=" Select area " />-->
+
+        <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
